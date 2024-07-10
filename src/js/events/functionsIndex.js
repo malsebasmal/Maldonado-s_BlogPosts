@@ -1,20 +1,6 @@
 import { apiHANDLER } from "../api.js";
 
-class functionsDOM {
-  static publications = async () => {
-    try {
-      const posts = await apiHANDLER.getPOSTS();
-          
-      // const button = document.querySelector(".div__button--submit")
-      //   button.addEventListener("click", () => {
-      //   console.log(posts)
-      // })
-    } catch (error) {
-      console.error("Error fetching data", error)
-      throw new Error(error)
-    }
-  }
-
+class functionsIndexDOM {
   static publishButton = () => {
     const button = document.querySelector(".div__button--submit")
     button.addEventListener("click", async () => {
@@ -39,6 +25,5 @@ class functionsDOM {
   
 }
 
-functionsDOM.publications()
-functionsDOM.publishButton()
-functionsDOM.resetButton()
+functionsIndexDOM.publishButton()
+functionsIndexDOM.resetButton()

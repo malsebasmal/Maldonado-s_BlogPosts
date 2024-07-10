@@ -1,0 +1,130 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.main {
+  width: 100%;
+  height: auto;
+}
+.main__section {
+  padding: 1rem 2rem;
+
+  width: inherit;
+  height: inherit;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.section__h1 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.5em;
+}
+.section__div {
+  width: inherit;
+  height: inherit;
+}
+
+.div__ul {
+  width: inherit;
+  height: inherit;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.ul__li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #ececec;
+  width: 20rem;
+  height: 25rem;
+  padding: 1rem 1.5rem;
+
+  border: 1px solid #7f7e7e;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 0.5rem;
+
+  .li__div {
+    width: 100%;
+    height: 13.5rem;
+    margin-bottom: 1rem;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.li__button--delete,
+.li__button--view {
+  width: 10rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  
+  color: black;
+
+  z-index: 1;
+  position: relative;
+
+  font-weight: 1000;
+  font-size: 1.1em;
+
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+
+  transition: all 250ms;
+  overflow: hidden;
+  
+  &::before,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 250ms;
+  }
+
+  &:hover::before,
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+}
+
+.li__button--delete {
+  background-color: #da2c38c5;
+  border: 5px solid #da2c3800;
+  margin-top: 1.3rem;
+
+  &::before {
+    background-color: white;
+  }
+}
+
+.li__button--view {
+  background-color: #4ad66d;
+  border: 5px solid #4ad66d00;
+  
+  &::before {
+    background-color: white;
+    color: black;
+  }
+}
