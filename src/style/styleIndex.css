@@ -47,7 +47,9 @@
   gap: 1.5rem;
 }
 .div__button--reset,
-.div__button--submit {
+.div__button--submit,
+.div__button-viewPosts {
+  width: 11.5rem;
   padding: 0.5rem 2rem;
   border-radius: 1rem;
   
@@ -65,6 +67,7 @@
   overflow: hidden;
   
   &::before,
+  &::before,
   &::before {
     content: "";
     position: absolute;
@@ -76,6 +79,7 @@
     transition: all 250ms;
   }
 
+  &:hover::before,
   &:hover::before,
   &:hover::before {
     width: 100%;
@@ -106,9 +110,18 @@
     color: black;
   }
 }
+.div__button-viewPosts {
+  background-color: #219ebc;
+  border: 5px solid #4ad66d00;
+
+  &::before{
+    background-color: white;
+    color: black;
+  }
+}
 
 /* Modal */
-.warring{
+.warring {
   width: 2rem;
 }
 .modal-dialog {
@@ -122,13 +135,13 @@
   justify-content: center;
   align-items: center;
 }
-.check-img{
+.check-img {
   width: 5.5rem;
 }
-.modalcheckContent{
+.modalcheckContent {
   gap: 1rem !important;
 }
-.modalcheckTitle{
+.modalcheckTitle {
   font-size: 2em;
   font-weight: bolder;
 }
