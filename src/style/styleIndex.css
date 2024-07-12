@@ -107,3 +107,86 @@
   }
 }
 
+/* Modal */
+.warring{
+  width: 2rem;
+}
+.modal-dialog {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-img{
+  width: 5.5rem;
+}
+.modalcheckContent{
+  gap: 1rem !important;
+}
+.modalcheckTitle{
+  font-size: 2em;
+  font-weight: bolder;
+}
+.button__OtherPost,
+.button__ViewPost {
+  width: 9rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--color);
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 53.5%;
+    left: 53.5%;
+    z-index: -1;
+    transition: 0.5s ease-out;
+    background-color: var(--color);
+  }
+  &::before {
+    inset: -53.5%;
+    left: -53.5%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+  }
+  &:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+  }
+  &:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+  }
+  &:hover {
+    color: var(--color2);
+  }
+  &:active {
+    filter: brightness(0.7);
+    transform: scale(0.98);
+  }
+}
+
+.button__OtherPost {
+  --color: #6c757d;
+  --color2: #ffffff;
+}
+.button__ViewPost {
+  --color: #219ebc;
+  --color2: #000000;
+}

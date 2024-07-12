@@ -20,12 +20,43 @@
   <div class="div__background">
     <main class="main">
       <section class="main__section">
+
+        <div class="modal fade" id="modalAlertError" tabindex="-1" aria-labelledby="modalAlertError" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 d-flex gap-1" id="modalAlertError">Error <img class="warring" src="./icons/warning.webp" alt="warring"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                No puedes enviar el campo vacío
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h1 class="section__h1">Maldonado's BlogPosts</h1>
         <textarea name="" id="" class="section__textarea"></textarea>
         <div class="section__div--buttons">
           <button class="div__button--reset">Reset</button>
           <button class="div__button--submit">Publish</button>
         </div>
+
+        <div class="modal fade" id="modalCheckPublish" tabindex="-1" aria-labelledby="modalCheckText" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content w-75">
+              <div class="modal-body d-flex flex-column justify-content-center align-items-center modalcheckContent">
+                <img class="check-img" src="./icons/check.webp" alt="check">
+                <h3 class="modal-title modalcheckTitle">Is published!</h3>
+                <div class="modal-buttons d-flex flex-wrap justify-content-center align-items-center gap-4">
+                  <button type="button" class="button__OtherPost">Other post</button>
+                  <button type="button" class="button__ViewPost">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
     </main>
   </div>
