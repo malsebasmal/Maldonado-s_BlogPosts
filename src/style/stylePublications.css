@@ -128,3 +128,15 @@
     color: black;
   }
 }
+
+.modal-dialog {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
