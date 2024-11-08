@@ -1,5 +1,5 @@
 class apiHANDLER {
-  static apiURL = "https://maldonado-sblogpostsback-production.up.railway.app/posts"
+  static apiURL = "https://api-blogposts-wkrn.onrender.com/posts"
   
   static getPOSTS = async () => {
     try {
