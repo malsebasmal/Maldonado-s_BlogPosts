@@ -203,3 +203,27 @@
   --color: #219ebc;
   --color2: #000000;
 }
+
+@media screen and (width <= 768px) {
+  .section__div--buttons {
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media screen and (width <= 425px) {
+  .section__div--buttons {
+    justify-content: center;
+  }
+  .div__button-viewPosts,
+  .div__button--reset,
+  .div__button--submit {
+    text-align: center;
+    width: 100%;
+  }
+
+  .section__h1 {
+    font-size: 12vw;
+    text-align: center;
+  }
+}

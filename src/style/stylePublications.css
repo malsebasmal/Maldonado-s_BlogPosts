@@ -22,6 +22,7 @@
   font-size: 3.5em;
 }
 .section__div {
+  margin-top: 0.5rem;
   width: inherit;
   height: inherit;
 }
@@ -139,4 +140,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (width <= 425px) {
+  .section__h1 {
+    font-size: 11vw;
+    text-align: center;
+  }
 }
